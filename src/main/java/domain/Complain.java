@@ -1,6 +1,7 @@
 package domain;
 
 public class Complain {
+    private int id;
     private int ownerID;
     private String listName;
     private boolean spam;
@@ -17,6 +18,10 @@ public class Complain {
     private boolean extremism;
     private boolean hostileSpeech;
     private boolean unoriginalContent;
+
+    public int getId() {
+        return id;
+    }
 
     public int getOwnerID() {
         return ownerID;
@@ -82,6 +87,10 @@ public class Complain {
         return violence;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setOwnerID(int ownerID) {
         this.ownerID = ownerID;
     }
@@ -108,10 +117,6 @@ public class Complain {
 
     public void setDrugPropaganda(boolean drugPropaganda) {
         this.drugPropaganda = drugPropaganda;
-    }
-
-    public static void main(String[] args) {
-
     }
 
     public void setExtremism(boolean extremism) {

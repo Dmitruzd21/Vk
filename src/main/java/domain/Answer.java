@@ -1,6 +1,7 @@
 package domain;
 
 public class Answer {
+    private int id;
     private int ownerID;
     private String userName;
     private String avatarUrl;
@@ -16,6 +17,10 @@ public class Answer {
 
     public int getOwnerID() {
         return ownerID;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getUserName() {
@@ -64,6 +69,10 @@ public class Answer {
 
     public void setOwnerID(int ownerID) {
         this.ownerID = ownerID;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setUserName(String userName) {

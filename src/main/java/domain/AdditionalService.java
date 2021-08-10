@@ -1,6 +1,7 @@
 package domain;
 
 public class AdditionalService {
+    private int id;
     private int ownerID;
     private SaveToBookmarks saveToBookmarks;
     private DeleteFromBookmarks deleteFromBookmarks;
@@ -9,6 +10,11 @@ public class AdditionalService {
     public int getOwnerID() {
         return ownerID;
     }
+
+    public int getId() {
+        return id;
+    }
+
     public SaveToBookmarks getSaveToBookmarks () {
         return saveToBookmarks;
     }
@@ -34,4 +40,10 @@ public class AdditionalService {
     public void setComplain(Complain complain) {
         this.complain = complain;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
 }

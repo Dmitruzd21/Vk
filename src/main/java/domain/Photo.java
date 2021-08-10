@@ -1,9 +1,14 @@
 package domain;
 
 public class Photo {
+    private int id;
     private int ownerID;
     private boolean photoPresence;
     private String photoUrl;
+
+    public int getId() {
+        return id;
+    }
 
     public int getOwnerID() {
         return ownerID;
@@ -15,6 +20,10 @@ public class Photo {
 
     public String getPhotoUrl() {
         return photoUrl;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setOwnerID(int ownerID) {

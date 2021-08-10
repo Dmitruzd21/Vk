@@ -1,6 +1,7 @@
 package domain;
 
 public class ShareInShare {
+    private int id;
     private int ownerID;
     private boolean onMyWall;
     private String myWallUrl;
@@ -15,6 +16,10 @@ public class ShareInShare {
     private String audioUrl;
     private String fileUrl;
     private Timer timer;
+
+    public int getId() {
+        return id;
+    }
 
     public int getOwnerID() {
         return ownerID;
@@ -70,6 +75,10 @@ public class ShareInShare {
 
     public Timer getTimer() {
         return timer;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setOwnerID(int ownerID) {

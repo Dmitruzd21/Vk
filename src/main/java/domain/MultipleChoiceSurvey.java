@@ -1,6 +1,7 @@
 package domain;
 
 public class MultipleChoiceSurvey {
+    private int id;
     private int ownerID;
     private String question;
     private String nameOfObject;
@@ -8,6 +9,10 @@ public class MultipleChoiceSurvey {
     private String answer;
     private int numberOfVoters;
     private String mainPageUrl;
+
+    public int getId() {
+        return id;
+    }
 
     public int getOwnerID() {
         return ownerID;
@@ -35,6 +40,10 @@ public class MultipleChoiceSurvey {
 
     public String getQuestion() {
         return question;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setOwnerID(int ownerID) {

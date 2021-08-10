@@ -1,6 +1,7 @@
 package domain;
 
 public class Post {
+    private int id;
     private int ownerID;
     private String avatarUrl;
     private String userName;
@@ -12,13 +13,25 @@ public class Post {
     private MultipleChoiceSurvey multipleChoiceSurvey;
     private Poster poster;
     private Graffiti graffiti;
-    private int likesInfo;
+    private LikesInfo likesInfo;
     private Comments comments;
     private int commentsInfo;
     private AdditionalService aditionalService;
     private int numberOfSharedPostsInfo;
     private Share share;
     private boolean сanViewUnregisteredUser;
+    private int fromId; //идентификатор автора записи (от чьего имени опубликована запись).
+    private int createdBy;  //идентификатор администратора, который опубликовал запись (возвращается только для сообществ при запросе с ключом доступа администратора). Возвращается в записях, опубликованных менее 24 часов назад.
+    private boolean friendsOnly; //1, если запись была создана с опцией «Только для друзей».
+    private boolean markedAsAds; //информация о том, содержит ли запись отметку "реклама" (1 — да, 0 — нет).
+    private boolean isPinned;   //информация о том, что запись закреплена.
+    private boolean canPin;  //информация о том, может ли текущий пользователь закрепить запись (1 — может, 0 — не может).
+    private boolean canDelete;  //информация о том, может ли текущий пользователь удалить запись (1 — может, 0 — не может).
+    private boolean canEdit;  //информация о том, может ли текущий пользователь редактировать запись (1 — может, 0 — не может).
+
+    public int getId() {
+        return id;
+    }
 
     public int getOwnerID() {
         return ownerID;
@@ -72,7 +85,7 @@ public class Post {
         return video;
     }
 
-    public int getLikesInfo() {
+    public LikesInfo getLikesInfo () {
         return likesInfo;
     }
 
@@ -90,6 +103,42 @@ public class Post {
 
     public VisualLink getVisualLink() {
         return visualLink;
+    }
+
+    public boolean isFriendsOnly() {
+        return friendsOnly;
+    }
+
+    public int getCreatedBy() {
+        return createdBy;
+    }
+
+    public int getFromId() {
+        return fromId;
+    }
+
+    public boolean isCanDelete() {
+        return canDelete;
+    }
+
+    public boolean isCanEdit() {
+        return canEdit;
+    }
+
+    public boolean isCanPin() {
+        return canPin;
+    }
+
+    public boolean isMarkedAsAds() {
+        return markedAsAds;
+    }
+
+    public boolean isPinned() {
+        return isPinned;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setOwnerID(int ownerID) {
@@ -132,7 +181,7 @@ public class Post {
         this.graffiti = graffiti;
     }
 
-    public void setLikesInfo(int likesInfo) {
+    public void setLikesInfo(LikesInfo likesInfo) {
         this.likesInfo = likesInfo;
     }
 
@@ -162,6 +211,38 @@ public class Post {
 
     public void setVisualLink(VisualLink visualLink) {
         this.visualLink = visualLink;
+    }
+
+    public void setFromId(int fromId) {
+        this.fromId = fromId;
+    }
+
+    public void setCreatedBy(int createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public void setFriendsOnly(boolean friendsOnly) {
+        this.friendsOnly = friendsOnly;
+    }
+
+    public void setCanDelete(boolean canDelete) {
+        this.canDelete = canDelete;
+    }
+
+    public void setCanEdit(boolean canEdit) {
+        this.canEdit = canEdit;
+    }
+
+    public void setCanPin(boolean canPin) {
+        this.canPin = canPin;
+    }
+
+    public void setMarkedAsAds(boolean markedAsAds) {
+        this.markedAsAds = markedAsAds;
+    }
+
+    public void setPinned(boolean pinned) {
+        isPinned = pinned;
     }
 }
 

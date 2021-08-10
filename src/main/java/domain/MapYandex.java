@@ -1,8 +1,13 @@
 package domain;
 
 public class MapYandex {
+    private int id;
     private int ownerID;
     private String locationUrl;
+
+    public int getId() {
+        return id;
+    }
 
     public int getOwnerID() {
         return ownerID;
@@ -10,6 +15,10 @@ public class MapYandex {
 
     public String getLocationUrl() {
         return locationUrl;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setOwnerID(int ownerID) {

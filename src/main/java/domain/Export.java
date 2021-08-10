@@ -1,11 +1,16 @@
 package domain;
 
 public class Export {
+    private int id;
     private int ownerID;
     private GenerateLinkForExport generateLinkForExport;
     private EmbedCode embedCode;
     private Preview preview;
     private int width;
+
+    public int getId() {
+        return id;
+    }
 
     public int getOwnerID() {
         return ownerID;
@@ -25,6 +30,10 @@ public class Export {
 
     public int getWidth() {
         return width;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setOwnerID(int ownerID) {

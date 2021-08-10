@@ -1,9 +1,15 @@
 package domain;
 
 public class VisualLink {
+    private int id;
     private int ownerID;
     private boolean visualLinkPresence;
     private String visualLinkUrl;
+
+
+    public int getId() {
+        return id;
+    }
 
     public int getOwnerID() {
         return ownerID;
@@ -15,6 +21,10 @@ public class VisualLink {
 
     public String getVisualLinkUrl() {
         return visualLinkUrl;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setOwnerID(int ownerID) {

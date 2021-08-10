@@ -1,9 +1,10 @@
 package domain;
 
 public class OneCommentBlock {
+    private int id;
     private int ownerID;
-   private boolean interesting;
-   private String userName;
+    private boolean interesting;
+    private String userName;
     private String avatarUrl;
     private String dateOfPublication;
     private String text;
@@ -16,6 +17,10 @@ public class OneCommentBlock {
     private int numberOfLikesInfo;
     private boolean canAnswer;
     private Complain complain;
+
+    public int getId() {
+        return id;
+    }
 
     public int getOwnerID() {
         return ownerID;
@@ -75,6 +80,10 @@ public class OneCommentBlock {
 
     public Complain getComplain() {
         return complain;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setOwnerID(int ownerID) {

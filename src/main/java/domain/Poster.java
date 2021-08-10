@@ -1,6 +1,7 @@
 package domain;
 
 public class Poster {
+    private int id;
     private int ownerID;
     private String topic;
     private String backgroundUrl;
@@ -9,6 +10,10 @@ public class Poster {
     private boolean author;
     private String authorName;
     private MapYandex mapYandex;
+
+    public int getId() {
+        return id;
+    }
 
     public int getOwnerID() {
         return ownerID;
@@ -40,6 +45,10 @@ public class Poster {
 
     public String getTopic() {
         return topic;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setOwnerID(int ownerID) {

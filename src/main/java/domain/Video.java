@@ -1,10 +1,15 @@
 package domain;
 
 public class Video {
+    private int id;
     private int ownerID;
     private boolean videoPresence;
     private String videoUrl;
     private int numberOfVideoViewsInfo;
+
+    public int getId() {
+        return id;
+    }
 
     public int getOwnerID() {
         return ownerID;
@@ -20,6 +25,10 @@ public class Video {
 
     public int getNumberOfVideoViewsInfo() {
         return numberOfVideoViewsInfo;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setOwnerID(int ownerID) {
