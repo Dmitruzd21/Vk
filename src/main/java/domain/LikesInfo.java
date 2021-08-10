@@ -36,5 +36,5 @@ public class LikesInfo {
 
     public void setCount(int count) {
         this.count = count;
-    }пше
+    }
 }
